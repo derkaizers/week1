@@ -1,0 +1,31 @@
+<script>
+var m = prompt('Masukkan Berat badan Anda!')
+var t = prompt('Masukkan tinggi badan Anda!')
+var i = m/(Math.pow(t, 2))
+var a;
+
+
+
+if (i < 18.5){
+    a = 'BERAT BADAN ANDA KURANG!'
+}
+else if (i >= 18.5 && i <= 24.9){
+    a = 'BERAT BADAN ANDA IDEAL!!'
+}
+else if (i >= 25 && i <= 29.9){
+    a = 'BERAT BADAN ANDA BERLEBIH!!'
+}
+else if (i >= 30 && i <= 39.9){
+    a = 'BERAT BADAN ANDA SANNNGGGAATT BERLEBIH!!!'
+}
+else { a = 'SELAMAT... ANDA LAYAK MENJADI OBESITAS!!!'
+}
+
+console.log('')
+
+console.log('Massa anda: ' + m + ' kg & Tinggi anda: ' + t + ' m')
+alert('Massa anda: ' + m + ' kg & Tinggi anda: ' + t + ' m \n IMT anda = ' + i + ', '+ a)
+console.log('')
+console.log('IMT anda = ' + i + ', '+ a)
+
+</script>

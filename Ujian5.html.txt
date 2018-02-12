@@ -1,0 +1,37 @@
+<center>
+        <h1>FizzBuzz List</h1>
+        <form id="form">
+            <p><b>Jumlah list</b> &nbsp; <input type="number"></p>
+        </form>
+        <button onclick="fizzBuzz()">Fizz Buzz!</button>
+        <br><br>
+        <table>
+            <tr>
+                <td><ul id="hasil"></ul></td>
+            </tr>
+        </table>
+        </center>
+        
+        <script>
+            function fizzBuzz() {
+                let x = document.getElementById("form").elements[0].value;
+                let z = '';
+                let n = '';
+                for (i=1; i<=x; i++) {
+                    if (i % 5 === 0 && i % 3 === 0) {
+                        z = 'Fizz Buzz'
+                    }
+                    else if (i % 5 === 0) {
+                        z = 'Buzz'
+                    }
+                    else if (i % 3 === 0) {
+                        z = 'Fizz'
+                    }
+                    else {
+                        z = i
+                    }
+                    n += '<li><b>'+z+'</b></li>';
+                } 
+                document.getElementById("hasil").innerHTML = n;
+            }
+        </script>
